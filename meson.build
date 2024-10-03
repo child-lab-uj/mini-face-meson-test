@@ -6,4 +6,4 @@ project(
     ]
 )
 
-subdir('mini_face')
+subdir('mini_face_oxidized')

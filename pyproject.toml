@@ -1,5 +1,5 @@
 [project]
-name = 'mini-face'
+name = 'mini-face-oxidized'
 version = '0.0.1'
 description = 'An oxidized OpenFace ported to Python'
 readme = 'README.md'
