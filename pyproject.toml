@@ -1,0 +1,12 @@
+[project]
+name = 'mini-face'
+version = '0.0.1'
+description = 'An oxidized OpenFace ported to Python'
+readme = 'README.md'
+requires-python = '>=3.12'
+license = { file = 'LICENSE.txt' }
+authors = [{ name = 'Jan Smółka', email = 'jp.smolka@gmail.com' }]
+
+[build-system]
+build-backend = 'mesonpy'
+requires = ['meson-python', 'pybind11']
