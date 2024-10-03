@@ -19,10 +19,10 @@ py.extension_module(
     ],
     dependencies: pybind11_dep,
     install: true,
-    subdir: 'mini_face/open_face_api'
+    subdir: 'mini_face_oxidized/open_face_api'
 )
 
 py.install_sources(
     '__init__.py',
-    subdir: 'mini_face/open_face_api'
+    subdir: 'mini_face_oxidized/open_face_api'
 )

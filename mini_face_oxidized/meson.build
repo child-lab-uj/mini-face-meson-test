@@ -5,7 +5,7 @@ py.install_sources(
     [
         '__init__.py',
     ],
-    subdir: 'mini_face'
+    subdir: 'mini_face_oxidized'
 )
 
 subdir('open_face_api')
