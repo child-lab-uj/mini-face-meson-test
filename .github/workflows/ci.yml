@@ -23,13 +23,7 @@ jobs:
       - uses: actions/setup-python@v5
 
       - name: Install vcpkg
-        uses: johnwason/vcpkg-action@v6
-        with:
-          pkgs: false
-          triplet: ${{ matrix.config.vcpkg_triplet }}
-          token: ${{ github.token }}
-          cache-key: ${{ matrix.config.os }}
-          github-binarycache: true
+        uses: lukka/run-vcpkg@v11
 
       - name: Install cibuildwheel
         run: python -m pip install cibuildwheel==2.21.2
