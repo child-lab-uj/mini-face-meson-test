@@ -15,4 +15,4 @@ requires = ['meson-python', 'pybind11']
 environment-pass = ["VCPKG_ROOT"]
 
 [tool.cibuildwheel]
-environment = { PATH = "$PATH:$VCPKG_ROOT:/usr/local/bin" } # This allows accessing `vcpkg` in the container created by `cibuildwheel`
+environment = { PATH = "$PATH:/home/runner/work/mini-face-meson-test/mini-face-meson-test/vcpkg:/usr/local/bin" } # This allows accessing `vcpkg` in the container created by `cibuildwheel`
