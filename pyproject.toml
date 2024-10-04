@@ -10,3 +10,6 @@ authors = [{ name = 'Jan Smółka', email = 'jp.smolka@gmail.com' }]
 [build-system]
 build-backend = 'mesonpy'
 requires = ['meson-python', 'pybind11']
+
+[tool.cibuildwheel.linux]
+environment-pass = ["PATH"]
