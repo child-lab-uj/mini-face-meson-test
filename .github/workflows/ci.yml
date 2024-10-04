@@ -30,7 +30,8 @@ jobs:
       - name: Debug
         run: |
           whereis vcpkg
-          ls ${{ github.workspace }}/vcpkg
+          echo $VCPKG_ROOT
+          echo $vcpkg_root
           echo $PATH
 
       - name: Install cibuildwheel
