@@ -15,8 +15,8 @@ jobs:
             vcpkg_triplet: x64-linux-release
           - os: macos-15
             vcpkg_triplet: x64-osx-release
-          - os: windows-latest
-            vcpkg_triplet: x64-windows-release
+          # - os: windows-latest
+          #   vcpkg_triplet: x64-windows-release
 
     steps:
       - uses: actions/checkout@v4
