@@ -4,6 +4,16 @@ vcpkg = find_program(
 )
 
 run_command(
+    echo,
+    'VCPKG_ROOT: $VCPKG_ROOT'
+)
+
+run_command(
+    whereis,
+    'vcpkg'
+)
+
+run_command(
     vcpkg,
     'install',
     '--x-wait-for-lock',
