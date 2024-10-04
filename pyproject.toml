@@ -16,4 +16,4 @@ requires = ['meson-python', 'pybind11']
 
 [tool.cibuildwheel.linux]
 environment-pass = ["VCPKG_ROOT"]
-before-all = "sh $VCPKG_ROOT/bootstrap-vcpkg.sh"
+before-all = "sh ./vcpkg/bootstrap-vcpkg.sh"
