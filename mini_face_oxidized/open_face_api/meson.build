@@ -1,6 +1,6 @@
 vcpkg = find_program(
     'vcpkg',
-    dirs: ['/Users/runner/work/mini-face-meson-test/mini-face-meson-test/vcpkg/', '/project/vcpkg/vcpkg'],
+    dirs: ['/Users/runner/work/mini-face-meson-test/mini-face-meson-test/vcpkg/', '/project/vcpkg'],
     required: true
 )
 
