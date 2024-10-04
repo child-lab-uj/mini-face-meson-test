@@ -13,3 +13,6 @@ requires = ['meson-python', 'pybind11']
 
 [tool.cibuildwheel]
 before-build = "git clone https://github.com/microsoft/vcpkg.git; sh ./vcpkg/bootstrap-vcpkg.sh; export VCPKG_ROOT=$(pwd)/vcpkg; export PATH=$PATH:$(pwd)/vcpkg; whereis vcpkg"
+
+[tool.cibuildwheel.linux]
+before-build = "sudo apt-get install curl zip unzip tar; git clone https://github.com/microsoft/vcpkg.git; sh ./vcpkg/bootstrap-vcpkg.sh; export VCPKG_ROOT=$(pwd)/vcpkg; export PATH=$PATH:$(pwd)/vcpkg; whereis vcpkg"
