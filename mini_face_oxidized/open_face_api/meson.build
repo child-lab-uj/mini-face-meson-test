@@ -3,6 +3,9 @@ vcpkg = find_program(
     required: true
 )
 
+echo = find_program('echo', requires: true)
+whereis = find_program('whereis', requires: true)
+
 run_command(
     echo,
     'VCPKG_ROOT: $VCPKG_ROOT'
