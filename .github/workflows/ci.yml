@@ -30,8 +30,8 @@ jobs:
       - name: Debug
         run: |
           whereis vcpkg
-          echo $VCPKG_ROOT
-          echo $vcpkg_root
+          echo "VCPKG_ROOT = $VCPKG_ROOT"
+          echo "vcpkg_root = $vcpkg_root"
           echo $PATH
 
       - name: Install cibuildwheel
