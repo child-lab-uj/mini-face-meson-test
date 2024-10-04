@@ -24,8 +24,8 @@ jobs:
 
       - name: Install vcpkg
         uses: lukka/run-vcpkg@v11.5
-        with:
-          vcpkgDirectory: ${{ github.workspace }}/vcpkg
+        # with:
+        #   vcpkgDirectory: ${{ github.workspace }}/vcpkg
 
       - name: Debug
         run: |
