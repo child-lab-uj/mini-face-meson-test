@@ -1,22 +1,8 @@
-
-echo = find_program('echo', required: true)
-whereis = find_program('whereis', required: true)
-
-run_command(
-    echo,
-    'VCPKG_ROOT: $VCPKG_ROOT'
-)
-
-run_command(
-    whereis,
-    'vcpkg'
-)
-
 vcpkg = find_program(
     'vcpkg',
+    '$VCPKG_ROOT',
     required: true
 )
-
 
 run_command(
     vcpkg,
