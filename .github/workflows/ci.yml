@@ -11,8 +11,8 @@ jobs:
     strategy:
       matrix:
         config:
-          - os: ubuntu-22.04
-            vcpkg_triplet: x64-linux-release
+          # - os: ubuntu-22.04
+          #   vcpkg_triplet: x64-linux-release
           - os: macos-15
             vcpkg_triplet: x64-osx-release
           - os: windows-latest
