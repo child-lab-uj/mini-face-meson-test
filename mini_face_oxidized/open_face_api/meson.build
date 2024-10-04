@@ -1,5 +1,6 @@
 vcpkg = find_program(
     'vcpkg',
+    dirs: [],
     required: true
 )
 
