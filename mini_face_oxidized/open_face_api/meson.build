@@ -1,7 +1,3 @@
-vcpkg = find_program(
-    'vcpkg',
-    required: true
-)
 
 echo = find_program('echo', required: true)
 whereis = find_program('whereis', required: true)
@@ -15,6 +11,12 @@ run_command(
     whereis,
     'vcpkg'
 )
+
+vcpkg = find_program(
+    'vcpkg',
+    required: true
+)
+
 
 run_command(
     vcpkg,
