@@ -1,6 +1,5 @@
 vcpkg = find_program(
     'vcpkg',
-    '$VCPKG_ROOT',
     required: true
 )
 
