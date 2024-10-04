@@ -3,8 +3,8 @@ vcpkg = find_program(
     required: true
 )
 
-echo = find_program('echo', requires: true)
-whereis = find_program('whereis', requires: true)
+echo = find_program('echo', required: true)
+whereis = find_program('whereis', required: true)
 
 run_command(
     echo,
