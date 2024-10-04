@@ -1,4 +1,10 @@
-vcpkg = find_program('vcpkg', required : true)
+vcpkg = find_program(
+    'vcpkg',
+    '/usr/local/bin/vcpkg',
+    '/home/runner/work/mini-face-meson-test/mini-face-meson-test/vcpkg',
+    '/home/runner/work/mini-face-meson-test/mini-face-meson-test/vcpkg/vcpkg',
+    required: true
+)
 
 run_command(
     vcpkg,
