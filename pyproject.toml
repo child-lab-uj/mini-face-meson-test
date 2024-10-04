@@ -15,4 +15,4 @@ requires = ['meson-python', 'pybind11']
 # environment = { PATH = "$PATH:/home/runner/work/mini-face-meson-test/mini-face-meson-test/vcpkg:/usr/local/bin" } # This allows accessing `vcpkg` in the container created by `cibuildwheel`
 
 [tool.cibuildwheel]
-before-all = "git clone https://github.com/microsoft/vcpkg.git; ls ./vcpkg; sh ./vcpkg/bootstrap-vcpkg.sh"
+before-all = "git clone https://github.com/microsoft/vcpkg.git; sh ./vcpkg/bootstrap-vcpkg.sh; export VCPKG_ROOT=$(pwd)/vcpkg; export PATH=$PATH:$(pwd)/vcpkg"
