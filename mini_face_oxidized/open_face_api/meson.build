@@ -1,4 +1,11 @@
-vcpkg = find_program('vcpkg', required : true)
+vcpkg = find_program(
+    'vcpkg',
+    dirs: [
+        '/Users/runner/work/mini-face-meson-test/mini-face-meson-test/vcpkg/',
+        '/project/vcpkg'
+    ],
+    required: true
+)
 
 run_command(
     vcpkg,
