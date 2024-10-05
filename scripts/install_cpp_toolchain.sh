@@ -5,7 +5,7 @@
 set -e
 
 # install tools
-yum install -y zip cmake ninja pkgconfig
+yum install -y zip cmake pkgconfig
 
 # install vcpkg :skull:
 git clone https://github.com/microsoft/vcpkg.git
