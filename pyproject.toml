@@ -11,9 +11,6 @@ authors = [{ name = 'Jan Smółka', email = 'jp.smolka@gmail.com' }]
 build-backend = 'mesonpy'
 requires = ['meson-python', 'pybind11']
 
-# [tool.cibuildwheel]
-# before-build = "git clone https://github.com/microsoft/vcpkg.git; sh ./vcpkg/bootstrap-vcpkg.sh; export VCPKG_ROOT=$(pwd)/vcpkg; export PATH=$PATH:$(pwd)/vcpkg; whereis vcpkg"
-
 [tool.cibuildwheel.linux]
+archs = ['x86', 'aarch64']                         # limit to these two for now
 before-all = "sh scripts/install_cpp_toolchain.sh"
-# before-build = "yum install -y zip; git clone https://github.com/microsoft/vcpkg.git; sh ./vcpkg/bootstrap-vcpkg.sh; export VCPKG_ROOT=$(pwd)/vcpkg; export PATH=$PATH:$(pwd)/vcpkg; whereis vcpkg"
