@@ -84,15 +84,15 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Download all the wheels
-        uses: actions/download-artifact@v4
-        with:
-          name: wheels
-          path: dist/
-
       - name: Install dependencies
         run: |
           pip install twine
+
+      - name: Download all the wheels
+        uses: actions/download-artifact@v3
+        with:
+          name: wheels
+          path: dist/
 
       - name: Publish distribution to Test PyPI
         run: |
