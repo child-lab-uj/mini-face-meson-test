@@ -5,7 +5,7 @@
 set -e
 
 # install tools
-apk add zip cmake pkgconfig
+apk add zip cmake pkgconfig ninja build-base
 
 # install vcpkg :skull:
 git clone https://github.com/microsoft/vcpkg.git
