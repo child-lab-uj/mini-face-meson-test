@@ -18,18 +18,21 @@ pybind11_dep = dependency('pybind11', required: true)
 py = import('python').find_installation(pure: false)
 
 py.extension_module(
-    'bindings',
+    '_bindings',
     [
         'src/bindings.cpp',
         'src/open_face.h',
         'src/open_face.cpp',
     ],
+    include_directories: ['src'],
     dependencies: pybind11_dep,
     install: true,
     subdir: 'mini_face_oxidized/open_face_api'
 )
 
 py.install_sources(
-    '__init__.py',
+    [
+        '__init__.py',
+    ],
     subdir: 'mini_face_oxidized/open_face_api'
 )

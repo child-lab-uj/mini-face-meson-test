@@ -5,7 +5,7 @@
 #include "open_face.h"
 
 
-PYBIND11_MODULE(bindings, handle) {
+PYBIND11_MODULE(_bindings, handle) {
     handle.doc() = "pybind11 example module";
     handle.def("add", &add, "A function that adds two numbers");
 }

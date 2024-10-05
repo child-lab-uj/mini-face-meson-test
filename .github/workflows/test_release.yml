@@ -73,7 +73,7 @@ jobs:
     runs-on: ubuntu-latest
 
     environment:
-      name: pypi
+      name: test-pypi
       url: https://test.pypi.org/p/mini-face-oxidized
 
     permissions:

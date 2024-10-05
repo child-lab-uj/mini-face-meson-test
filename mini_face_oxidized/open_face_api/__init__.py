@@ -1,1 +1,3 @@
-from .bindings import add
+from ._bindings import add
+
+__all__ = ["add"]
