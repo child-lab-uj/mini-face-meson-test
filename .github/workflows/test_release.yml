@@ -6,6 +6,26 @@ on:
       - "preproduction"
 
 jobs:
+  check-version:
+    name: Check version of the released package
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Read version from pyproject.toml
+        id: pyproject_version
+        uses: SebRollen/toml-action@v1.2.0
+        with:
+          file: "pyproject.toml"
+          field: "version"
+
+      - name: Read version from vcpkg.json
+        id: vcpkg_version
+        uses: ActionsTools/read-json-action@main
+        with:
+          file_path: "mini_face_oxidized/open_face_api/vcpkg.json"
+          prop_path: "version"
+
   publish:
     name: >-
       Publish Python 🐍 distribution 📦 to PyPI
