@@ -1,0 +1,45 @@
+name: Release a new version in PyPI
+
+on:
+  push:
+    branches:
+      - "preproduction"
+
+jobs:
+  publish:
+    name: >-
+      Publish Python 🐍 distribution 📦 to PyPI
+
+    needs:
+      - build
+
+    runs-on: ubuntu-latest
+
+    environment:
+      name: pypi
+      url: https://test.pypi.org/p/mini-face-oxidized
+
+    permissions:
+      id-token: write
+
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Download all the wheels
+        uses: actions/download-artifact@v4
+        with:
+          name: wheels
+          path: dist/
+
+      - name: Install dependencies
+        run: |
+          pip install twine
+
+      - name: Publish distribution to Test PyPI
+        run: |
+          twine upload -r testpypi dist/*
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.TEST_PYPI_KEY }}
