@@ -4,19 +4,13 @@ on: [pull_request]
 
 jobs:
   build:
-    name: Build wheels on ${{ matrix.config.os }}
+    name: Build wheels on ${{ matrix.os }}
 
-    runs-on: ${{ matrix.config.os }}
+    runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
-        config:
-          - os: ubuntu-latest
-            vcpkg_triplet: x64-linux-release
-          - os: macos-15
-            vcpkg_triplet: x64-osx-release
-          # - os: windows-latest
-          #   vcpkg_triplet: x64-windows-release
+        os: [ubuntu-latest, macos-15]
 
     steps:
       - uses: actions/checkout@v4
@@ -33,13 +27,14 @@ jobs:
       - name: Build wheels
         run: python -m cibuildwheel --output-dir dist
 
-      - name: Show obtained wheels
-        run: ls ./dist
+      - name: Show obtained wheels and some debug info
+        run: |
+          ls ./dist
 
       - name: Store wheels
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
-          name: distributions
+          name: dist
           path: ./dist/*.whl
 
   publish:
