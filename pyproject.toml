@@ -12,5 +12,5 @@ build-backend = 'mesonpy'
 requires = ['meson-python', 'pybind11']
 
 [tool.cibuildwheel.linux]
-archs = ['x86', 'aarch64']                         # limit to these two for now
+archs = ['x86_64', 'aarch64']                      # limit to these two for now
 before-all = "sh scripts/install_cpp_toolchain.sh"
