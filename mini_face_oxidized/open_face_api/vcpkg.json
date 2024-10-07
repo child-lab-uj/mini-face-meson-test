@@ -1,12 +1,5 @@
 {
   "name": "openfaceapi",
   "version": "0.1.0",
-  "dependencies": [
-    "dlib",
-    "openblas",
-    "opencl",
-    "opencv",
-    "pybind11",
-    "carotene"
-  ]
+  "dependencies": ["dlib", "openblas", "opencl", "opencv", "pybind11"]
 }
