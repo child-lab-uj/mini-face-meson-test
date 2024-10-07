@@ -57,6 +57,7 @@ void AlignFace(
     int width = 96,
     int height = 96
 );
+
 void AlignFaceMask(
     cv::Mat &aligned_face,
     const cv::Mat &frame,
