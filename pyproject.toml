@@ -10,3 +10,14 @@ authors = [{ name = 'Jan Smółka', email = 'jp.smolka@gmail.com' }]
 [build-system]
 build-backend = 'mesonpy'
 requires = ['meson-python', 'pybind11']
+
+[tool.cibuildwheel.linux]
+archs = ['x86_64']
+
+[[tool.cibuildwheel.overrides]]
+select = "*-manylinux*"
+before-all = "sh scripts/cpp_toolchain_setup/manylinux.sh"
+
+[[tool.cibuildwheel.overrides]]
+select = "*-musllinux*"
+before-all = "sh scripts/cpp_toolchain_setup/musllinux.sh"
